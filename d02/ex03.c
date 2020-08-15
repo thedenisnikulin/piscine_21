@@ -1,16 +1,9 @@
-#include <stdio.h>
-
-void ft_is_negative(int n);
-
-int main() {
-    ft_is_negative(-2);
-    return 0;
-}
+void ft_putchar(char c); /* объявляю функцию вывода в stdout */
 
 void ft_is_negative(int n) {
     if (n >= 0) {
-        printf("P"); 
+        ft_putchar('P'); 
     } else {
-        printf("N");
+       ft_putchar('N');
     }
 }

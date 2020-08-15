@@ -1,16 +1,24 @@
-#include <stdio.h>
-
-void ft_print_alphabet();
-
-int main() {
-    ft_print_alphabet();
-    return 0;
-}
+/* объявляю функцию вывода символа в stdout, 
+т.е. в стандартный поток вывода */
+void ft_putchar(char c);  
 
 void ft_print_alphabet() {
-    char result[26];
-    for(int i=97; i<123; i++) {
-        result[i-97] = (char) i;
+    /* инициализирую переменную целого числа,
+    * значение которой соответствует коду первой буквы англ. алфавита
+    * в формате ASCII  
+    */
+    int letter = 97;
+    while (letter < 123) {
+        /* итерирую до кода символа последней буквы алфавита
+        * и вывожу в стандартный поток вывода
+        */
+        ft_putchar((char) letter);
+        letter++;
     }
-    printf("%s", result);
 }
+
+/* реализация ft_putchar
+* void ft_putchar(char c) {
+*    write(1, &c, 1);   
+* }
+*/

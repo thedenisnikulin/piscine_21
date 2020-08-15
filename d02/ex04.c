@@ -1,19 +1,32 @@
-#include <stdio.h>
-#include <math.h>
-
-void ft_print_comb();
-
-int main() {
-    ft_print_comb();
-    return 0;
-};
+void ft_putchar(char c); /* объявляю функцию вывода в stdout */
 
 void ft_print_comb() {
-    for (int i = 0; i < 10; i++) {
-        for (int j = i+1; j < 10; j++) {
-            for (int k = j+1; k < 10; k++) {
-                printf("%d%d%d, ", i, j, k);
+    /* вывод в формате 012, 013, 014, ... , 789, */
+
+    /* объявляю переменные счетчиков */
+    int i;
+    int j;
+    int k;
+
+    i = 0;
+    while (i < 10) { /* считаю первую цифру */
+        /* инициализируем переменную перед началом внутреннего цикла,
+        * для того чтобы она сбрасывалась после каждой итерации внешнего цикла и условие выполнялось*/
+        j = i + 1; 
+        while (j < 10) { /* считаю вторую цифру */
+            k = j + 1;
+            while (k < 10) { /* считаю третью цифру */
+                ft_putchar(i + '0');
+                ft_putchar(j + '0');
+                ft_putchar(k + '0');
+                if (i != 7) {
+                    ft_putchar(',');
+                    ft_putchar(' ');
+                }
+                k++;
             };
+            j++;
         };
+        i++;
     };
 };

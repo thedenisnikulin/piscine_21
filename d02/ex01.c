@@ -1,16 +1,12 @@
-#include <stdio.h>
-
-void ft_print_reverse_alphabet();
-
-int main() {
-    ft_print_reverse_alphabet();
-    return 0;
-}
+void ft_putchar(char c); /* объявляю функцию вывода в stdout */
 
 void ft_print_reverse_alphabet() {
-    char result[26];
-    for(int i=97; i<123; i++) {
-        result[122-i] = (char) i;
-    }
-    printf("%s", result);
+    /* делаю то же самое, только начиная с кода символа последней буквы алфавита,
+    * уменьшая значение переменной letter на 1
+    */
+    int letter = 122;
+    while (letter >= 97) {
+        ft_putchar((char) letter);
+        letter--;
+    };
 }
