@@ -1,3 +1,5 @@
+char *ft_strrev(char *str);
+
 char *ft_strrev(char *str)
 {
     int i;  /* счетчик для итерации по символам строки */
