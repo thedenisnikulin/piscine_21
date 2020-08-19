@@ -126,7 +126,7 @@ int ft_atoi(char *str)
  * 
  * int main(void)
  * {
- *     char str[] = "-123.45";  // output: -123
+ *     char str[] = "-123.45";  // expected output: -123
  *     ft_putnbr(ft_atoi(str));
  *     return (0);
  * }

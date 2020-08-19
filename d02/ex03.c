@@ -1,6 +1,6 @@
-void ft_putchar(char c); /* объявляю функцию вывода в stdout */
+void    ft_putchar(char c);            /* объявляю функцию вывода в stdout */
 
-void ft_is_negative(int n) 
+void    ft_is_negative(int n) 
 {
     if (n >= 0) 
     {
@@ -11,20 +11,19 @@ void ft_is_negative(int n)
     }
 }
 
-/* реализация ft_putchar
-* void ft_putchar(char c) 
-* {
-*    // 1 - запись в stdout
-*    // &c - адрес параметра c
-*    // 1 - количество байт которое нужно записать (1 byte == 1 char)
-*    write(1, &c, 1);  // функция из unistd.h
-* }
-*/
+/* 									реализация ft_putchar - функции печати символа
+void    ft_putchar(char c) 
+{
+	write(1, &c, 1);  				// функция из unistd.h принимает три параметра:
+									// 1 - запись в stdout
+									// &c - адрес параметра c
+									// 1 - количество байт которое нужно напечатать (1 byte == 1 char)
+}
 
-/* тест
-* int main(void) 
-* {
-*    ft_is_negative();
-*    return (0);
-* }
+									тест
+int     main(void) 
+{
+	ft_is_negative(-1);
+	return (0);
+}
 */
