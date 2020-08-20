@@ -4,7 +4,7 @@ void	ft_print_reverse_alphabet(void)
 {
 									/* делаю то же самое, только начиная с кода символа последней буквы алфавита, */
 									/* уменьшая значение переменной letter на 1 */
-	int letter;
+	int		letter;
 	
 	letter = 122;
 	while (letter >= 97) 

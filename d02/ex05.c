@@ -1,9 +1,9 @@
-void ft_putchar(char c);	/* объявляю функцию вывода в stdout */
+void	ft_putchar(char c);							/* объявляю функцию вывода в stdout */
 
-void ft_print_comb2(void) 
+void	ft_print_comb2(void) 
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (i < 100) 

@@ -2,16 +2,16 @@ void    ft_putchar(char c);     /* объявляю функцию вывода 
 
 void    ft_print_numbers(void) 
 {
-    int num;
-    
-    num = 48;
-    while (num < 58) 
-    {
-                                /* итерация через коды ASCII символов, */
-                                /* начиная с 48 ('0') и заканчивая 57 ('9') */
-        ft_putchar(num);
-        num++;
-    }
+	int		num;
+	
+	num = 48;
+	while (num < 58) 
+	{
+								/* итерация через коды ASCII символов, */
+								/* начиная с 48 ('0') и заканчивая 57 ('9') */
+		ft_putchar(num);
+		num++;
+	}
 }
 
 /* 									реализация ft_putchar - функции печати символа

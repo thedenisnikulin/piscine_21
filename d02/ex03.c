@@ -1,14 +1,11 @@
-void    ft_putchar(char c);            /* объявляю функцию вывода в stdout */
+void    ft_putchar(char c);			/* объявляю функцию вывода в stdout */
 
 void    ft_is_negative(int n) 
 {
-    if (n >= 0) 
-    {
-        ft_putchar('P'); 
-    } else 
-    {
-       ft_putchar('N');
-    }
+	if (n >= 0)
+		ft_putchar('P'); 
+	else
+		ft_putchar('N');
 }
 
 /* 									реализация ft_putchar - функции печати символа
