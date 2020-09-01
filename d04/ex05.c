@@ -1,17 +1,19 @@
-int		ft_fibonacci(int index)
+int		ft_sqrt(int nb)
 {
-	if (index < 0)
-		return (-1);
-	if (index == 1)
-		return (1);
-	if (index == 0)
-		return (0);
-	else 
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));	
+	int		i;
+
+	i = 0;
+	while (i <= nb) 
+	{
+		if ((i * i) == nb) 
+			return (i);
+		i++;
+	}
+	return (0);
 }
 
 /*
-void    ft_putchar(char c)							реализация ft_putchar - функции печати символа
+void    ft_putchar(char c)							// реализация ft_putchar - функции печати символа
 {
 	write(1, &c, 1);  								// функция из unistd.h принимает три параметра:
 													// 1 - запись в stdout
@@ -19,7 +21,7 @@ void    ft_putchar(char c)							реализация ft_putchar - функци�
 													// 1 - количество байт которое нужно напечатать (1 byte == 1 char)
 }
 
-void	ft_putnbr(int nb)							реализация ft_putnbr - функция печати числа
+void	ft_putnbr(int nb)							// реализация ft_putnbr - функция печати числа
 {
 	int		nbcp;									// number copy - копия числа
 	int		len;									// длина числа
@@ -52,8 +54,8 @@ int		main(void)
 {
 	int		n;
 
-	n = 7;
-	ft_putnbr(ft_fibonacci(n));						// expected: 13
+	n = 64;
+	ft_putnbr(ft_sqrt(n));						// expected: 8
 	return (0);
 }
 */

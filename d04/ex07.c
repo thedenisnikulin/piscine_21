@@ -1,17 +1,30 @@
-int		ft_fibonacci(int index)
+int		ft_is_prime(int nb)
 {
-	if (index < 0)
-		return (-1);
-	if (index == 1)
-		return (1);
-	if (index == 0)
+	int		checking_num;
+
+	if (nb <= 1)
 		return (0);
-	else 
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));	
+
+	checking_num = 2;
+	while (checking_num < nb) 
+	{
+		if (nb % checking_num == 0)
+			return (0);
+	
+		checking_num++;
+	}
+	return (1);
+}
+
+int		ft_find_next_prime(int nb)
+{
+	while (!ft_is_prime(nb)) 
+		nb++;
+	return (nb);
 }
 
 /*
-void    ft_putchar(char c)							реализация ft_putchar - функции печати символа
+void    ft_putchar(char c)							// реализация ft_putchar - функции печати символа
 {
 	write(1, &c, 1);  								// функция из unistd.h принимает три параметра:
 													// 1 - запись в stdout
@@ -19,7 +32,7 @@ void    ft_putchar(char c)							реализация ft_putchar - функци�
 													// 1 - количество байт которое нужно напечатать (1 byte == 1 char)
 }
 
-void	ft_putnbr(int nb)							реализация ft_putnbr - функция печати числа
+void	ft_putnbr(int nb)							// реализация ft_putnbr - функция печати числа
 {
 	int		nbcp;									// number copy - копия числа
 	int		len;									// длина числа
@@ -50,10 +63,10 @@ void	ft_putnbr(int nb)							реализация ft_putnbr - функция п�
 
 int		main(void)
 {
-	int		n;
+	int		test_num;
 
-	n = 7;
-	ft_putnbr(ft_fibonacci(n));						// expected: 13
+	test_num = 14;
+	ft_putnbr(ft_find_next_prime(test_num));		// expected: 17
 	return (0);
 }
 */

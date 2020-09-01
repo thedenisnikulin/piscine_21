@@ -1,17 +1,23 @@
-int		ft_fibonacci(int index)
+int		ft_is_prime(int nb)
 {
-	if (index < 0)
-		return (-1);
-	if (index == 1)
-		return (1);
-	if (index == 0)
+	int		checking_num;
+
+	if (nb <= 1)
 		return (0);
-	else 
-		return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));	
+
+	checking_num = 2;
+	while (checking_num < nb) 
+	{
+		if (nb % checking_num == 0)
+			return (0);
+	
+		checking_num++;
+	}
+	return (1);
 }
 
 /*
-void    ft_putchar(char c)							реализация ft_putchar - функции печати символа
+void    ft_putchar(char c)							// реализация ft_putchar - функции печати символа
 {
 	write(1, &c, 1);  								// функция из unistd.h принимает три параметра:
 													// 1 - запись в stdout
@@ -19,7 +25,7 @@ void    ft_putchar(char c)							реализация ft_putchar - функци�
 													// 1 - количество байт которое нужно напечатать (1 byte == 1 char)
 }
 
-void	ft_putnbr(int nb)							реализация ft_putnbr - функция печати числа
+void	ft_putnbr(int nb)							// реализация ft_putnbr - функция печати числа
 {
 	int		nbcp;									// number copy - копия числа
 	int		len;									// длина числа
@@ -50,10 +56,20 @@ void	ft_putnbr(int nb)							реализация ft_putnbr - функция п�
 
 int		main(void)
 {
-	int		n;
+	int		from;
+	int		until;
 
-	n = 7;
-	ft_putnbr(ft_fibonacci(n));						// expected: 13
+	from = 0;
+	until = 20;
+	while (from <= until)							// выводим числа от 0 до 20 и ответ являются ли они простыми 
+	{												// (1 - да, 0 - нет) в формате <число: ответ>
+		ft_putnbr(from);
+		ft_putchar(':');
+		ft_putchar(' ');
+		ft_putchar(ft_is_prime(from) + '0');
+		ft_putchar('\n');
+		from++;
+	}
 	return (0);
 }
 */
