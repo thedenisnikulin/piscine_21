@@ -1,15 +1,29 @@
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int		i;
+	int		k;
 
 	i = 0;
-	while (src[i] != '\0')
+	k = 0;
+	while (str[i] != '\0')						/* проходимся по строке */
 	{
-		dest[i] = src[i];
+		if (to_find[k] == '\0')					/* если символ в подстроке равен '\0',  */
+			return (to_find);					/* (конец подстроки), возвращаем подстроку, т.е. */
+												/* подстрока найдена */
+		if (str[i] == str[k])					/* если символ подстр равен символу стр, то продолжаем итерацию */
+		{
+			k++;
+			i++;
+			continue;
+		}
+		else									/* если не равен, то начинаем считать подстроку сначала */
+		{
+			k = 0;
+			continue;
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (((void *)0));						/* если ничего не найдено, возвращаем NULL */
 }
 
 /*
@@ -32,15 +46,9 @@ void	ft_putstr(char *str)	// т.к. строка в Си - массив симв
 
 int		main(void)
 {
-	char dest[] = "dest";
-	char src[] = "src";
-	ft_putstr("Before: ");
-	ft_putstr(dest);
-	ft_putstr("\n");
-	ft_strcpy(dest, src);
-	ft_putstr("After: ");
-	ft_putstr(dest);
-	ft_putstr("\n");
+	char str[] = "hello";
+	char sub[] = "ell";
+	ft_putstr(ft_strstr(str, sub));
 	return (0);
 }
 */

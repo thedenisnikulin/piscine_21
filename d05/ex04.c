@@ -1,14 +1,14 @@
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int		i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (i < (int) n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[++i] = '\0';
 	return (dest);
 }
 
@@ -37,7 +37,7 @@ int		main(void)
 	ft_putstr("Before: ");
 	ft_putstr(dest);
 	ft_putstr("\n");
-	ft_strcpy(dest, src);
+	ft_strncpy(dest, src, 3);
 	ft_putstr("After: ");
 	ft_putstr(dest);
 	ft_putstr("\n");
