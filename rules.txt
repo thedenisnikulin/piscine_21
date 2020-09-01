@@ -1,0 +1,53 @@
+==================== RULES ====================
+
+####### NAMING
+
+- ONLY LOWERCASE, _ AND DIGITS
+- Objects must have the most explicit or most mnemonic names as possible. 
+  Only 'counters' can be named to your liking
+
+
+####### FORMATTING
+
+- All files must begin with the standard school header
+- Each function must be maximum 25 lines
+- line length is no more than 80 symbols
+- The asterisks that go with pointers must be stuck to variable names
+- We cannot stick a declaration and an initialisation on the same line, except for
+  global variables and static variables
+- Declarations must be at the beginning of a function, and must be separated by an
+  empty line.
+
+
+####### FUNCTIONS
+
+- 4 params maximum
+- A function with no arguments must be prototyped with "void" argument
+- No more than 5 variables per block of code
+- No more than 5 function definitions inside a .c file
+
+
+####### TYPEDEF, STRUCTS, ENUM AND UNION
+
+- No structs in a .c file are allowed
+
+
+####### HEADERS
+
+- create header guards from double inclusion. For ft_foo.h bystander is FT_FOO_H
+
+
+####### COMMENTS
+
+- no comments inside functions' body
+- no // comments
+
+
+==================== FORBIDDEN ====================
+
+- for
+- do...while
+- switch/case
+- goto
+- ternary operators 
+- variable length arrays
